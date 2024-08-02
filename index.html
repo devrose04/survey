@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-za">
+  <head>
+    <meta name="pushsdk" content="445235c9aa98603f6c583a9d143f677a" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+      name="viewport"
+    />
+    <title>Congratulations!</title>
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <style>
+      #ip_text {
+        display: none;
+      }
+      #device_text {
+        display: none;
+      }
+      #browser_text {
+        display: none;
+      }
+      #loc_text {
+        display: none;
+      }
+      #os_text {
+        display: none;
+      }
+      #win_text {
+        display: none;
+      }
+
+      #ip_check {
+        display: none;
+      }
+      #device_check {
+        display: none;
+      }
+      #browser_check {
+        display: none;
+      }
+      #loc_check {
+        display: none;
+      }
+      #os_check {
+        display: none;
+      }
+    </style>
+    <script src="js/modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body oncontextmenu="return false" onload="setButtonHeight(); autospin1();">
+    <div id="header">
+      <span class="menu"></span>
+      <h3><span id="headline">SURVEYS</span></h3>
+      <span class="icon"></span>
+    </div>
+    <div id="container">
+      <div align="center" id="firstpage">
+        <div
+          class="date"
+          id="topDate"
+          style="padding-bottom: 10px; margin: 0"
+        ></div>
+        <div style="margin-bottom: 2px">
+          <div id="subheadline">
+            <p style="font-size: 18px"><b>Congratulations!</b></p>
+            <p style="padding-top: 10px">Today you are lucky!</p>
+          </div>
+          <div class="intro" style="padding-top: 5px">
+            Every <span id="today"></span> we select 7 users to give them the
+            opportunity to win prizes from our sponsors. Turn the wheel to see
+            which prize you will receive!
+          </div>
+          <div id="wheelCon">
+            <img
+              class="transparent"
+              height="501"
+              id="wheel"
+              src="images/spin-wheel.png"
+              width="501"
+            />
+            <input
+              id="pressButton"
+              onclick="spin()"
+              style="top: 106.2px"
+              type="button"
+            />
+            <div>
+              <img
+                class="animated rotateIn"
+                id="devMockup"
+                src="images/usd-total.png"
+                style="display: hidden; left: 64px; top: 42px"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="secondpage">
+          <span class="logo"></span>
+          <div class="congrats">
+            <h4>
+              <a
+                href="https://www.google.com"
+                style="cursor: pointer !important"
+                preventexitpop="false"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <font color="#3C5A96">
+                  Congratulations!<br />
+                  <span class="span-second">$ 2 50!</span>
+                </font>
+              </a>
+            </h4>
+          </div>
+          <div class="congrats" style="text-align: left">
+            <ol>
+              <li>
+                Choose a method that you would like. You will be redirected to
+                our sponsor's website.
+              </li>
+              <li>
+                Verify your mobile phone number on the sponsor's website to
+                download your personal voucher and claim your prize.
+              </li>
+            </ol>
+            <b>IMPORTANT:</b> Gifts can end anytime, choose faster!
+          </div>
+          <div class="timer">
+            Offer valid for
+            <font color="red">
+              <b
+                ><span id="mins">4</span> minutes and
+                <span id="hsecs">59</span> seconds</b
+              >
+            </font>
+          </div>
+          <div class="prize">
+            <table>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <td style="padding: 10px 5px 10px 0; text-align: center">
+                    <img
+                      src="images/usd.png"
+                      style="max-width: 100px"
+                    />
+                  </td>
+                  <td style="line-height: 1.6">
+                    <p style="text-align: left">
+                      <a
+                        href="https://www.google.com"
+                        style="cursor: pointer !important"
+                        preventexitpop="false"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span class="name">$ 2 50 to bank card</span>
+                      </a>
+                    </p>
+                    <p>
+                      <span class="smallfont"
+                        >You will receive a transfer of funds within 7 business
+                        days to your bank card.</span
+                      >
+                    </p>
+                    <p class="regular_price">
+                      Retail price: <s class="red_text">$ 2 50</s>
+                    </p>
+                    <p class="your_price">Your price: <span>$ 0</span></p>
+                    <p class="remaining">
+                      <b>Prizes left: <span>2</span></b>
+                    </p>
+                    <div>
+                      <a
+                        class="button"
+                        href="https://www.google.com"
+                        style="cursor: pointer !important"
+                        preventexitpop="false"
+                        rel="noreferrer"
+                        target="_blank"
+                        >Choose</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prize">
+            <table>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <td style="padding: 10px 5px 10px 0; text-align: center">
+                    <img
+                      src="images/usd.png"
+                      style="max-width: 100px"
+                    />
+                  </td>
+                  <td style="line-height: 1.6">
+                    <p style="text-align: left">
+                      <a
+                        href="https://www.google.com"
+                        style="cursor: pointer !important"
+                        preventexitpop="false"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <span class="name">$ 2 50 by postal order</span>
+                      </a>
+                    </p>
+                    <p>
+                      <span class="smallfont"
+                        >You will receive the funds by postal order in an
+                        envelope within 7 business days.</span
+                      >
+                    </p>
+                    <p class="regular_price">
+                      Retail price: <s class="red_text">$ 2 50</s>
+                    </p>
+                    <p class="your_price">Your price: <span>$ 0</span></p>
+                    <p class="remaining">
+                      <b>Prizes left: <span>1</span></b>
+                    </p>
+                    <div>
+                      <a
+                        class="button"
+                        href="https://www.google.com"
+                        style="cursor: pointer !important"
+                        preventexitpop="false"
+                        rel="noreferrer"
+                        target="_blank"
+                        >Choose</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="comments">
+          <center>
+            <font face="arial"></font>
+            <table
+              border="0"
+              cellpadding="4"
+              cellspacing="0"
+              style="padding-top: 10px; font-size: 13px"
+              width="100%"
+            >
+              <tbody id="comments_list">
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Silas-Kumar.jpeg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Silas Kumar</div>
+                    <div class="comment_text">
+                      Dropped $5 00! Honestly, I wanted $ 25 00,
+                      but not today.
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">Yesterday at 08:13</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Jonah-Al-habsi.jpeg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Jonah Al Habsi</div>
+                    <div class="comment_text">
+                      I won 1 free spin, but I did not win a prize. Can I get
+                      another chance?
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">16 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Vihaan-Kannan.jpeg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Vihaan Kannan</div>
+                    <div class="comment_text">
+                      I just unpacked the envelope with $ 2 50! This is
+                      the best prize of all!
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">16 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Mariam-Saeed.jpg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Mariam Saeed</div>
+                    <div class="comment_text">
+                      At first I thought it was a joke, but this morning I was
+                      delivered $ 10 00, I also got a T-shirt with a
+                      logo!
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">16 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Fatima-Khan.jpeg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Fatima Khan</div>
+                    <div class="comment_text">
+                      My $ 5 00 arrived on the card this morning!! I love
+                      it!!!
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">15 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Liya-Pillai.jpg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Liya Pillai</div>
+                    <div class="comment_text">
+                      I won $ 2 50. I still do not believe that this is
+                      true!
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">15 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <hr />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="right"
+                    class="photo_avatar"
+                    valign="top"
+                    width="40"
+                  >
+                    <img src="images/Mark-Garsia.jpg" />
+                  </td>
+                  <td align="left" valign="top">
+                    <div class="comment_name">Shajid Ahamed</div>
+                    <div class="comment_text">
+                      I won $ 1 000, thank you so much!!
+                    </div>
+                    <div class="comments__item__meta">
+                      <div class="item_date">14 December</div>
+                    </div>
+                    <div class="pi_links">
+                      <span class="like_wrap"
+                        ><span class="pi_link">Like</span></span
+                      >
+                      <span class="pi_reply_wrap">· <span>Comment</span></span>
+                      <span class="pi_acts_link"><i class="i_icon"></i></span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" name="ip" />
+    <input type="hidden" name="country" />
+    <input type="hidden" name="city" />
+
+    <script src="js/animate.js"></script>
+    <script src="js/offerlink.js"></script>
+  </body>
+</html>
